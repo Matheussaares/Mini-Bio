@@ -5,9 +5,8 @@ export function Profile() {
   return (
     <View style={styles.card}>
       <Image 
-        /* DICA: Troque o link abaixo pelo link de uma foto sua 
-           Ex: https://github.com/seu-usuario-do-github.png */
-        source={{ uri: 'https://github.com/github.png' }} 
+        /* Link atualizado com o seu usuário do GitHub */
+        source={{ uri: 'https://github.com/Matheus-Soares-Silva.png' }} 
         style={styles.avatar} 
       />
       <Text style={styles.name}>Matheus Soares</Text>
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 8,
     elevation: 5,
-    width: '90%', // Garante que o card não cole nas bordas
+    width: '100%', 
   },
   avatar: {
     width: 140,
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     borderRadius: 70,
     marginBottom: 20,
     borderWidth: 4,
-    borderColor: '#007AFF', // Azul para dar um destaque profissional
+    borderColor: '#007AFF', 
   },
   name: {
     fontSize: 26,
