@@ -1,32 +1,28 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Profile } from '../../components/Profile'; // Importando seu componente
+import React from 'react';
+import { StyleSheet, View, SafeAreaView, StatusBar } from 'react-native';
+// Importando o seu componente que está na pasta components
+import { Profile } from '../../components/Profile'; 
 
-export default function HomeScreen() {
+export default function TabOneScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>
-        App criado para a disciplina Programação para Dispositivos Móveis
-      </Text>
-      
-      <Profile />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" />
+      <View style={styles.content}>
+        <Profile />
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
+    backgroundColor: '#f5f5f5',
   },
-  header: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    color: '#333',
-    textAlign: 'center',
-    marginBottom: 40,
-    textTransform: 'uppercase',
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
   },
 });
