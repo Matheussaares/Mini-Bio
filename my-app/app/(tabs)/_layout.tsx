@@ -1,28 +1,40 @@
+import React from 'react';
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false, tabBarActiveTintColor: '#007AFF' }}>
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: '#007AFF',
+        tabBarInactiveTintColor: '#8E8E93',
+        tabBarStyle: {
+          backgroundColor: '#ffffff',
+          borderTopWidth: 1,
+          borderTopColor: '#E5E5EA',
+          height: 60,
+          paddingBottom: 8,
+        },
+        // Ativa a animação de deslize entre as abas
+        
+      }}>
       
-      {/* Aba da Bio */}
       <Tabs.Screen
         name="index"
         options={{
           title: 'Bio',
-          tabBarIcon: ({ color }) => <Ionicons name="person" size={28} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="person" size={26} color={color} />,
         }}
       />
 
-      {/* Aba dos Projetos (GitHub) */}
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Projetos',
-          tabBarIcon: ({ color }) => <Ionicons name="logo-github" size={28} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="logo-github" size={26} color={color} />,
         }}
       />
-
     </Tabs>
   );
 }
